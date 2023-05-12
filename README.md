@@ -32,6 +32,25 @@ Keep in mind that while web scraping, you should always respect website terms of
 `$eval()` for the first single instance.
 
 - "." for class, "#" for id of the element
+- Let a div component have `class="col-lg-6 intro-content"`. In that case, use `document.querySelector(".col-lg-6.intro-content")`
+- textContent, innerHTML, innerText
+- Click href link: `page.click('a[href="/login"]')`
+- Add a delay: `page.type("#password", "123", {delay: 100})`
+- For `<input type="submit" value="Login" class="btn btn-primary">`, use `page.click('input[value="Login"]')`
+
+### Playgrounds
+- http://quotes.toscrape.com/
+- 
+
+#### Useful Node Libraries
+- sharp - Image Processing
+
+#### Node Notes
+- `for each` does not support `await` but `for of` does.
+- Promise.all()
+- Array.from()
+- arr.reduce()
+
 
 #### References
 - [Puppeteer docs](https://pptr.dev/)
@@ -55,5 +74,5 @@ Code block
 }
 ```
 
-- `for each` does not support `await` but `for of` does.
+
 
