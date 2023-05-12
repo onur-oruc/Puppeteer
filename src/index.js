@@ -55,7 +55,7 @@ async function start() {
 
   console.log(info)
   console.log(infoV2)
-
+page.click('a[href="/login"]')
   // do NOT forget to close the browser.
   await browser.close()
 }
