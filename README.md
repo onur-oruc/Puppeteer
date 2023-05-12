@@ -35,6 +35,7 @@ Keep in mind that while web scraping, you should always respect website terms of
 
 #### References
 - [Puppeteer docs](https://pptr.dev/)
+- [Puppeteer examples](https://github.com/puppeteer/examples)
 
 ### Markdown Cheatsheet
 [Markdown cheatsheet](https://wordpress.com/support/markdown-quick-reference/ "Markdown Reference").
