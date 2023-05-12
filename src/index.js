@@ -22,7 +22,7 @@ async function start() {
   const catNames = await page.evaluate(() => {
     return Array.from(document.querySelectorAll(".info strong")).map((x) => x.textContent)
   })
-  await fs.writeFile("catNames.txt", catNames.join("\r\n"))
+  await fs.writeFile("../assets/catNames.txt", catNames.join("\r\n"))
 
   // SAVE IMAGES TO HARD DRIVE
   const photos = await page.$$eval("img", imgs => {
@@ -32,7 +32,7 @@ async function start() {
   // use `for of` instead of `for each` the former supports `await` and the latter does NOT
   for (const photo of photos) {
     const imagePage = await page.goto(photo)
-    await fs.writeFile(photo.split("/").pop(), await imagePage.buffer())
+    await fs.writeFile("../assets/" + photo.split("/").pop(), await imagePage.buffer())
   }
 
   // CLICK BUTTON AND REVEAL CONTENT
