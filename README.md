@@ -68,6 +68,7 @@ Keep in mind that while web scraping, you should always respect website terms of
   - `const nextPageElement = await page.$x("//a[contains(@class, 's-pagination-next') and contains(text(), 'Next')]")`;
   - `const element = await page.$x("//a[contains(@aria-label, 'Go to next page')]");`. Here is an example element: `<a href="www.google.com" aria-label="Go to next page, page 3"></a>`
   - `page.$x()` function with an XPath expression to select the `<a>` element that contains the text "Next". The contains() function is used to match any element that has the text "Next" within it.
+- `await page.waitForSelector("li.a-last", { visible: true });`
 
 
 
