@@ -4,4 +4,4 @@ node_modules
 *.jpg
 *.txt
 assets
-
+tmp
